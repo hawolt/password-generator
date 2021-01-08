@@ -1,0 +1,4 @@
+PasswordGenerator.iml
+target/*
+src/test/*
+.idea/*
