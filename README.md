@@ -6,15 +6,15 @@ Minimalistic password-generator
 
 ```xml
 <dependency>
-	<groupId>com.github.hawolt</groupId>
-	<artifactId>password-generator</artifactId>
-	<version>058dd5e6d4</version>
+    <groupId>com.github.hawolt</groupId>
+    <artifactId>password-generator</artifactId>
+    <version>058dd5e6d4</version>
 </dependency>
 ```
 ```xml
 <repository>
-	<id>jitpack.io</id>
-	<url>https://jitpack.io</url>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
 </repository>
 ```
 
