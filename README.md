@@ -1,1 +1,62 @@
-# password-generator
+# PasswordGenerator
+
+Minimalistic password-generator
+
+## Maven
+
+```xml
+<dependency>
+	<groupId>com.github.hawolt</groupId>
+	<artifactId>password-generator</artifactId>
+	<version>058dd5e6d4</version>
+</dependency>
+```
+```xml
+<repository>
+	<id>jitpack.io</id>
+	<url>https://jitpack.io</url>
+</repository>
+```
+
+## Example Usage
+
+```java
+import com.hawolt.ASCII;
+import com.hawolt.Configuration;
+import com.hawolt.Generator;
+import com.hawolt.charset.AbstractCharset;
+
+public class GeneratorExample {
+
+    public static void main(String[] args) {
+        /*
+         * Defining a custom Charset for the Generator
+         */
+        AbstractCharset charset = new AbstractCharset() {
+            @Override
+            protected int[][] getBounds() {
+                return new int[][]{new int[]{48, 57}};
+            }
+        };
+
+        /*
+         * Initializing a Generator using the Configuration Builder
+         */
+        Generator generator = Configuration.builder()
+                .addCharacterSet(ASCII.UPPERCASE)
+                .addCharacterSet(ASCII.LOWERCASE)
+                .addCharacterSet(ASCII.SPECIAL)
+                .addCharacterSet(charset)
+                .setMinimumLength(7)
+                .setMaximumLength(13)
+                .setShuffle(true)
+                .build()
+                .createGenerator();
+
+        /*
+         * Generate a password matching the Configuration
+         */
+        String password = generator.generate();
+    }
+}
+```
