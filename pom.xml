@@ -6,6 +6,23 @@
 
     <groupId>com.hawolt</groupId>
     <artifactId>PasswordGenerator</artifactId>
+<<<<<<< HEAD
     <version>1.1</version>
+=======
+    <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+>>>>>>> 9a6d7b0dd4b6189cbe1dcd2dee8defa3c855f440
 
 </project>

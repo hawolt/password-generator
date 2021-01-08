@@ -1,4 +1,8 @@
 PasswordGenerator.iml
 target/*
 src/test/*
+<<<<<<< HEAD
 .idea/*
+=======
+.idea/*
+>>>>>>> 9a6d7b0dd4b6189cbe1dcd2dee8defa3c855f440
